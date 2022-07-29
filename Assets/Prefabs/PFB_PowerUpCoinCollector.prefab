@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6149457516938899653}
   - component: {fileID: 216968318592533414}
-  - component: {fileID: 8137892397808960830}
+  - component: {fileID: 2507873742361672514}
   m_Layer: 0
-  m_Name: PFB_PowerUpSpeed
+  m_Name: PFB_PowerUpCoinCollector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4935875324527534792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.8779552, y: 7.9795256, z: 5.185705}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8137892396355958382}
@@ -46,7 +46,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8137892397808960830
+--- !u!114 &2507873742361672514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,16 +55,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4935875324527534792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5912bb6e4f78a5541a8101c6e14317e9, type: 3}
+  m_Script: {fileID: 11500000, guid: b1ada62b6c5138c49895b8596b3179a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player
   particleSystem: {fileID: 0}
   timeToHide: 3
-  graphicItem: {fileID: 8137892396355958379}
+  graphicItem: {fileID: 0}
   audioSource: {fileID: 0}
-  PowerUpDuration: 3
-  amoutToSpeed: 10
+  PowerUpDuration: 0
+  sizeAmount: 9
 --- !u!1 &8137892396355958379
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5e10b6b94f9d550489ce9337bc736a60, type: 2}
+  - {fileID: 2100000, guid: 76885b1f17f662f4ba55a3735e656b2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

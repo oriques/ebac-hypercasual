@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ecco.Core.Singleton;
+using TMPro;
+using DG.Tweening;
+
 
 public class PlayerController : Singleton<PlayerController>
 {
@@ -17,13 +20,23 @@ public class PlayerController : Singleton<PlayerController>
 
     public GameObject endScreen;
 
+    [Header("Text")]
+    public TextMeshPro uiTextPowerUp;
+    public bool invencible;
+
+    [Header("Coin Collector")]
+    public GameObject coinCollector;
+
     //privates
     private bool _canRun;
     private Vector3 _pos;
     private float _currentSpeed;
+    private Vector3 _startPosition;
+
 
     private void Start()
     {
+        _startPosition = transform.position;
         ResetSpeed();
     }
 
@@ -46,7 +59,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         if(collision.transform.tag == tagToCheckEnemy)
         {
-            Endgame();
+           if(!invencible) Endgame();
         }
     }
 
@@ -54,7 +67,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         if (other.transform.tag == tagToCheckEndLine)
         {
-            Endgame();
+            if (!invencible) Endgame();
         }
     }
 
@@ -70,19 +83,38 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     #region POWERUPS
+
+    public void SetPowerUpText(string s)
+    {
+        uiTextPowerUp.text = s;
+    }
     public void PowerUpSpeedUp (float f)
     {
         _currentSpeed = f;
     }
-    public void ResetSpeed()
+  public void ResetSpeed()
     {
         _currentSpeed = speed;
     }
 
+    public void SetInvencible(bool b = true)
+    {
+        invencible = b;
+    }
 
+    public void ChangeHeight (float amount, float PowerUpDuration, float animationDuration, Ease ease)
+    {
+        transform.DOMoveY(_startPosition.y + amount, animationDuration).SetEase(ease);
+        Invoke(nameof(ResetHeight), PowerUpDuration);
+    }
+    public void ResetHeight()
+    {
+        transform.DOMoveY(_startPosition.y, .1f); 
+    }
 
+    public void ChangeCoinCollectorSize(float amount )
+    {
+        coinCollector.transform.localScale = Vector3.one * amount;
+    }
     #endregion
-
-
-
 }

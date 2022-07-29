@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemCollactableBase : MonoBehaviour
 {
-    public string compareTag = "Player";
+    public string compareTag = "CoinCollector";
     public ParticleSystem particleSystem;
     public float timeToHide = 3;
     public GameObject graphicItem;
@@ -22,10 +22,15 @@ public class ItemCollactableBase : MonoBehaviour
         }
     }
 
+    protected virtual void HideItens()
+    {
+        if (graphicItem != null) graphicItem.SetActive(false);
+        Invoke("HideObject", timeToHide);
+    }
+
     protected virtual void Collect()
     {
-        if(graphicItem != null) graphicItem.SetActive(false);
-        Invoke("HideObject", timeToHide);
+        HideItens();
         Oncollect();
     }
 
