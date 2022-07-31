@@ -160,5 +160,5 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   collider: {fileID: 7054165272473968536}
   collect: 0
-  lerp: 5
-  minDistance: 1
+  lerp: 3
+  minDistance: 2.5
