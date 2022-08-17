@@ -122,7 +122,7 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.D ))
+        if(Input.GetKeyDown(KeyCode.D))
         {
             CreateLevel();
         }

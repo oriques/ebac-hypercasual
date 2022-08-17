@@ -1679,9 +1679,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artSetups:
   - artType: 0
-    gameObject: {fileID: 6592500696369613865, guid: 2e6c7d3c6fcd16f45817273f2aaf6288, type: 3}
+    gameObject: {fileID: 1380549386402248625, guid: a8bcc57190cc3874e94fe9f91edf35d8, type: 3}
   - artType: 1
-    gameObject: {fileID: 7310833909080972826, guid: 0f5d5147a9f9efa4b953e11382ae8916, type: 3}
+    gameObject: {fileID: 1380549386402248625, guid: a8bcc57190cc3874e94fe9f91edf35d8, type: 3}
 --- !u!4 &1384086725
 Transform:
   m_ObjectHideFlags: 0
