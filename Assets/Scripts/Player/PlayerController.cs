@@ -30,6 +30,7 @@ public class PlayerController : Singleton<PlayerController>
     [Header("Animaton")]
     public AnimatorManager animatorManager;
 
+    [SerializeField] private BounceHelper _bounceHelper;
 
     //privates
     private bool _canRun;
@@ -45,7 +46,18 @@ public class PlayerController : Singleton<PlayerController>
         ResetSpeed();
     }
 
-
+    public void Bounce()
+    {
+        if(_bounceHelper != null)
+            _bounceHelper.Bounce();
+    } 
+    
+    public void GrowPlayer()
+    {
+        if(_bounceHelper != null)
+            _bounceHelper.GrowPlayer();
+    }
+    
     void Update()
     {
         if (!_canRun) return;
@@ -96,6 +108,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         _canRun = true;
         animatorManager.Play(AnimatorManager.AnimationType.RUN, _currentSpeed / _baseSpeedToAnimation);
+        GrowPlayer();
     }
 
     #region POWERUPS
