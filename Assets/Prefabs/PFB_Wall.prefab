@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1201934935054070200}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,8 +94,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.74766654, y: 1, z: 1}
+  m_Center: {x: -0.12616678, y: 0, z: 0}
 --- !u!114 &1201934935054070200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 8189828233739694634}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,8 +205,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.7531522, y: 1, z: 1}
+  m_Center: {x: 0.123423934, y: 0, z: 0}
 --- !u!114 &8189828233739694634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,12 +232,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7350536924621495374}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: PFB_Wall
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7350536924621495374
 Transform:
   m_ObjectHideFlags: 0

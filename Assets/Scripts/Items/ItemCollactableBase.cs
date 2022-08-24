@@ -46,7 +46,8 @@ public class ItemCollactableBase : MonoBehaviour
         if (particleSystem != null)
         {
             particleSystem.transform.SetParent(null);
-             particleSystem.Play();
+            particleSystem.Play();
+            Destroy(particleSystem.gameObject, 1f);
 
         }
         if (audioSource != null) audioSource.Play();
