@@ -36,6 +36,7 @@ public class AnimatorManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Play(AnimationType.DEAD);
+
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
